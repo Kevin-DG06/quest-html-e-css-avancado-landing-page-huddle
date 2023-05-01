@@ -1,0 +1,170 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas: "header header"
+                         "container container "
+                         "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    background: url(../images/bg-desktop.svg) center center no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    padding: 50px;
+}
+
+.header{
+    grid-area: header;
+    margin-bottom: 20px;
+}
+
+.header img{
+    width: 16%;
+}
+
+.container{
+    grid-area: container;
+    display: flex;
+}
+
+.container .info{
+    margin: 50px;
+}
+
+.container .info h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.container .info p{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.container .info .btn-register{
+    font-size: 1.5rem;
+    color: hsl(257, 40%, 49%);
+    background-color: #fff;
+    padding: 15px 60px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.container .info .btn-register:hover{
+    color: #fff;
+    background-color: hsl(300, 69%, 71%);
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer i{
+    font-size: 4rem;
+    color: #fff;
+    padding: 15px 15px;
+    border: 1px solid #fff; 
+    border-radius: 50%;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.footer i:hover{
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%); 
+}
+
+@media(max-width: 751px) {
+    body{
+        background: url(../images/bg-mobile.svg) center no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+    }
+
+    .header img{
+        width: 50%;
+    }
+
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .info h1{
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+
+    .container .info p{
+        font-size: 3.4rem;
+        margin-bottom: 70px;
+    }
+
+    .container .info .btn-register{
+        font-size: 2.5rem;
+        color: hsl(257, 40%, 49%);
+        background-color: #fff;
+        padding: 20px 150px;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+
+    .footer i{
+        font-size: 5rem;
+    }
+} 
+
+@media(max-width: 425px){
+    body{
+        background: url(../images/bg-mobile.svg) center no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .header img{
+        width: 50%;
+    }
+
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container .info h1{
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .container .info p{
+        font-size: 1rem;
+        margin-bottom: 70px;
+    }
+
+    .container .info .btn-register{
+        font-size: 1.1rem;
+        color: hsl(257, 40%, 49%);
+        background-color: #fff;
+        padding: 15px 40px;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+
+    .footer i{
+        font-size: 1.5rem;
+    }
+}
